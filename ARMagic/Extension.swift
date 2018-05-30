@@ -50,8 +50,14 @@ public extension Float {
     public static func random(_ min: Float, max: Float) -> Float {
         return Float.random() * (max - min) + min
     }
-    
 }
+extension Int {
+    var degreesToRadians: Double { return Double(self) * .pi/180 }
+}
+    
+    
+    
+
 
 
 
