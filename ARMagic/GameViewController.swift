@@ -33,7 +33,18 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
     @objc func handlePlusButtonTapped() {
         print("Tapped on plus button")
-        addNode()
+//        addNode()
+        var doesEarthNodeExistInScene = false
+        arView.scene.rootNode.enumerateChildNodes {(node, _) in
+            if node.name == "earth" {
+                doesEarthNodeExistInScene = true
+            }
+        }
+        if !doesEarthNodeExistInScene {
+            addEarth()
+        }
+        
+        
         
     }
     
@@ -57,7 +68,6 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
-    
     let minusButtonWidth = ScreenSize.width * 0.1
     lazy var minusButton: UIButton = {
         var button = UIButton(type: .system)
@@ -79,6 +89,47 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     }
     
     let configuration = ARWorldTrackingConfiguration()
+    
+    let distanceLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textColor = UIColor.white
+        label.text = "Distance:"
+        return label
+    }()
+    
+    let xLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textColor = UIColor.red
+        label.text = "x:"
+        return label
+    }()
+    
+    let yLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textColor = UIColor.green
+        label.text = "y:"
+        return label
+    }()
+    
+    let zLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textColor = UIColor.blue
+        label.text = "z:"
+        return label
+    }()
+    
+    let centerImageView: UIImageView = {
+        let view = UIImageView()
+        view.image = #imageLiteral(resourceName: "Center")
+        view.contentMode = .scaleAspectFill
+        return view
+    }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,7 +175,27 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         view.addSubview(resetButton)
         resetButton.anchor(nil, left: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 24, rightConstant: 0, widthConstant: resetButtonWidth, heightConstant: resetButtonWidth)
         resetButton.anchorCenterXToSuperview()
+        
+        view.addSubview(distanceLabel)
+        distanceLabel.anchor(view.safeAreaLayoutGuide.topAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 24, leftConstant: 24, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 24)
+        
+        
+        view.addSubview(xLabel)
+        view.addSubview(yLabel)
+        view.addSubview(zLabel)
+        
+        xLabel.anchor(distanceLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 24, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 24)
+        yLabel.anchor(xLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 24, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 24)
+        zLabel.anchor(yLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 24, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 24)
+        
+        view.addSubview(centerImageView)
+        centerImageView.anchorCenterSuperview()
+        centerImageView.anchor(nil, left: nil, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: ScreenSize.width * 0.05, heightConstant: ScreenSize.heigth * 0.05)
     }
+    
+    
+    
+    
     
     func addNode() {
         let shapeNode = SCNNode()
@@ -212,9 +283,40 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
             print("Tapped \(String(describing: name)) with geometry: \(String(describing: geometry))")
         }
     }
+    func addEarth() {
+        let earthNode = SCNNode()
+        earthNode.name = "earth"
+        earthNode.geometry = SCNSphere(radius: 0.2)
+        
+        earthNode.geometry?.firstMaterial?.specular.contents = #imageLiteral(resourceName: "EarthSpecular")
+        earthNode.geometry?.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "earthDiffuser")
+        earthNode.geometry?.firstMaterial?.emission.contents = #imageLiteral(resourceName: "EarthEmission")
+        earthNode.geometry?.firstMaterial?.normal.contents = #imageLiteral(resourceName: "EarthNormal")
+        
+        earthNode.position = SCNVector3(0,0,-0.5)
+        arView.scene.rootNode.addChildNode(earthNode)
+        
+        let rotate = SCNAction.rotateBy(x: 0, y: CGFloat(360.degreesToRadians), z: 0, duration: 15)
+        let rorateForever = SCNAction.repeatForever(rotate)
+        earthNode.runAction(rorateForever)
+        
+    }
     
 }
 
+//Earth Material Resourecs
+// https://www.solarsystemscope.com/
+
+
+//basic Material Properities:
+
+// Diffuse : The diffuse property specifies the amount of light diffusely reflected from the surface.
+
+// Specular: The specylar property specifies the amount of light to reflect in a mirror-like manner.
+
+// Emmision: The emission property specifies the amount of light the material emits. This emission does not light up other surfaces in the scene.
+
+// Normal: The normal property specifies the surface orientation.
 
 
 
