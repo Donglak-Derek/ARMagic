@@ -90,7 +90,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
     let configuration = ARWorldTrackingConfiguration()
     
-    let distanceLabel: UILabel = {
+    var distanceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = UIColor.white
@@ -129,6 +129,9 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         return view
     }()
     
+    var startingPositionNode: SCNNode?
+    var endingPositionNode: SCNNode?
+    var cameraRelativePosition = SCNVector3(0,0,-0.1)
     
     
     override func viewDidLoad() {
@@ -271,17 +274,58 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         print("Plane Anchor removed with extent:", anchorPlane.extent)
         removeNode(named: "floor")
     }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didApplyAnimationsAtTime time: TimeInterval) {
+        
+        if startingPositionNode != nil && endingPositionNode != nil {
+            return
+        }
+        guard let xDistance = Service.distance3(fromStartingPositionNode: startingPositionNode, onView: arView, cameraRelativePosition: cameraRelativePosition)?.x else {return}
+        guard let yDistance = Service.distance3(fromStartingPositionNode: startingPositionNode, onView: arView, cameraRelativePosition: cameraRelativePosition)?.y else {return}
+        guard let zDistance = Service.distance3(fromStartingPositionNode: startingPositionNode, onView: arView, cameraRelativePosition: cameraRelativePosition)?.z else {return}
+    
+        DispatchQueue.main.async {
+            self.xLabel.text = String(format: "x: %.2f", xDistance) + "m"
+            self.yLabel.text = String(format: "y: %.2f", yDistance) + "m"
+            self.zLabel.text = String(format: "z: %.2f", zDistance) + "m"
+            self.distanceLabel.text = String(format: "Distance: %.2f", Service.distance(x: xDistance, y: yDistance, z: zDistance)) + "m"
+        }
+    }
+    
+    
+    
     // object C because it's selector
     @objc func handleTap(sender: UITapGestureRecognizer ) {
-        let tappedView = sender.view as! SCNView
-        let touchLocation = sender.location(in: tappedView)
-        let hitTest = tappedView.hitTest(touchLocation, options: nil)
-        if !hitTest.isEmpty {
-            let result = hitTest.first!
-            let name = result.node.name
-            let geometry = result.node.geometry
-            print("Tapped \(String(describing: name)) with geometry: \(String(describing: geometry))")
+//        let tappedView = sender.view as! SCNView
+//        let touchLocation = sender.location(in: tappedView)
+//        let hitTest = tappedView.hitTest(touchLocation, options: nil)
+//        if !hitTest.isEmpty {
+//            let result = hitTest.first!
+//            let name = result.node.name
+//            let geometry = result.node.geometry
+//            print("Tapped \(String(describing: name)) with geometry: \(String(describing: geometry))")
+//        }
+        
+        if startingPositionNode != nil && endingPositionNode != nil {
+            startingPositionNode?.removeFromParentNode()
+            endingPositionNode?.removeFromParentNode()
+            startingPositionNode = nil
+            endingPositionNode = nil
+            
+        } else if startingPositionNode != nil && endingPositionNode == nil {
+            let sphere = SCNNode(geometry: SCNSphere(radius: 0.002))
+            sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+            Service.addChildNode(sphere, toNode: arView.scene.rootNode, inView: arView, cameraRelativePosition: cameraRelativePosition)
+            endingPositionNode = sphere
+            
+        } else if startingPositionNode == nil && endingPositionNode == nil {
+            let sphere = SCNNode(geometry: SCNSphere(radius: 0.002))
+            sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.purple
+            Service.addChildNode(sphere, toNode: arView.scene.rootNode, inView: arView, cameraRelativePosition: cameraRelativePosition)
+            startingPositionNode = sphere
         }
+        
+        
     }
     func addEarth() {
         let earthNode = SCNNode()

@@ -10,6 +10,7 @@
 		6E997C2EDF75CCF19355FFC8 /* Pods_ARMagicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956FD680F8802591B5BC0FBB /* Pods_ARMagicTests.framework */; };
 		890D4F2DAB5ECBFEBA71D78F /* Pods_ARMagicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245D98274519F50DD6299562 /* Pods_ARMagicUITests.framework */; };
 		900CECAD20BEF63900F9AC7B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CECAC20BEF63900F9AC7B /* Extension.swift */; };
+		900CECAF20BF4C7800F9AC7B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CECAE20BF4C7800F9AC7B /* Service.swift */; };
 		90C6B8D420BDF9CF00385068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8D320BDF9CF00385068 /* AppDelegate.swift */; };
 		90C6B8DB20BDF9D000385068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C6B8DA20BDF9D000385068 /* Assets.xcassets */; };
 		90C6B8DE20BDF9D000385068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6B8DC20BDF9D000385068 /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 		3321237E274449BB84D1362A /* Pods_ARMagic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARMagic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49347719327DE9691732EC2B /* Pods-ARMagicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMagicUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARMagicUITests/Pods-ARMagicUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		900CECAC20BEF63900F9AC7B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		900CECAE20BF4C7800F9AC7B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		90C6B8D020BDF9CF00385068 /* ARMagic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARMagic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C6B8D320BDF9CF00385068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90C6B8DA20BDF9D000385068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				90C6B8DF20BDF9D000385068 /* Info.plist */,
 				90C6B90120BDFB1700385068 /* GameViewController.swift */,
 				900CECAC20BEF63900F9AC7B /* Extension.swift */,
+				900CECAE20BF4C7800F9AC7B /* Service.swift */,
 			);
 			path = ARMagic;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				900CECAD20BEF63900F9AC7B /* Extension.swift in Sources */,
+				900CECAF20BF4C7800F9AC7B /* Service.swift in Sources */,
 				90C6B90220BDFB1700385068 /* GameViewController.swift in Sources */,
 				90C6B8D420BDF9CF00385068 /* AppDelegate.swift in Sources */,
 			);
