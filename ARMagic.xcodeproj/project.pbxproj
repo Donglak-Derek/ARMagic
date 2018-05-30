@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E997C2EDF75CCF19355FFC8 /* Pods_ARMagicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956FD680F8802591B5BC0FBB /* Pods_ARMagicTests.framework */; };
+		890D4F2DAB5ECBFEBA71D78F /* Pods_ARMagicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245D98274519F50DD6299562 /* Pods_ARMagicUITests.framework */; };
+		900CECAD20BEF63900F9AC7B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CECAC20BEF63900F9AC7B /* Extension.swift */; };
 		90C6B8D420BDF9CF00385068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8D320BDF9CF00385068 /* AppDelegate.swift */; };
-		90C6B8D620BDF9CF00385068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8D520BDF9CF00385068 /* ViewController.swift */; };
-		90C6B8D920BDF9CF00385068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6B8D720BDF9CF00385068 /* Main.storyboard */; };
 		90C6B8DB20BDF9D000385068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C6B8DA20BDF9D000385068 /* Assets.xcassets */; };
 		90C6B8DE20BDF9D000385068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6B8DC20BDF9D000385068 /* LaunchScreen.storyboard */; };
 		90C6B8E920BDF9D000385068 /* ARMagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8E820BDF9D000385068 /* ARMagicTests.swift */; };
 		90C6B8F420BDF9D000385068 /* ARMagicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8F320BDF9D000385068 /* ARMagicUITests.swift */; };
+		90C6B90220BDFB1700385068 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B90120BDFB1700385068 /* GameViewController.swift */; };
+		A69617DADE5ED63964CC12CA /* Pods_ARMagic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321237E274449BB84D1362A /* Pods_ARMagic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		063AA0754C1D5F7D917F2FAD /* Pods-ARMagic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMagic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARMagic/Pods-ARMagic.debug.xcconfig"; sourceTree = "<group>"; };
+		0F93AEB073EC975A3CFF41BF /* Pods-ARMagic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMagic.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARMagic/Pods-ARMagic.release.xcconfig"; sourceTree = "<group>"; };
+		132E48834202CE547DD3D70A /* Pods-ARMagicUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMagicUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARMagicUITests/Pods-ARMagicUITests.release.xcconfig"; sourceTree = "<group>"; };
+		245D98274519F50DD6299562 /* Pods_ARMagicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARMagicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3321237E274449BB84D1362A /* Pods_ARMagic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARMagic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49347719327DE9691732EC2B /* Pods-ARMagicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMagicUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARMagicUITests/Pods-ARMagicUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		900CECAC20BEF63900F9AC7B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		90C6B8D020BDF9CF00385068 /* ARMagic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARMagic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C6B8D320BDF9CF00385068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90C6B8D520BDF9CF00385068 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		90C6B8D820BDF9CF00385068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90C6B8DA20BDF9D000385068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90C6B8DD20BDF9D000385068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90C6B8DF20BDF9D000385068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		90C6B8EF20BDF9D000385068 /* ARMagicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARMagicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C6B8F320BDF9D000385068 /* ARMagicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMagicUITests.swift; sourceTree = "<group>"; };
 		90C6B8F520BDF9D000385068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90C6B90120BDFB1700385068 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		956FD680F8802591B5BC0FBB /* Pods_ARMagicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARMagicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0A1B5861F4FAF4DDA088338 /* Pods-ARMagicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMagicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARMagicTests/Pods-ARMagicTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC7C699E2FB597E5D9851DF2 /* Pods-ARMagicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMagicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARMagicTests/Pods-ARMagicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69617DADE5ED63964CC12CA /* Pods_ARMagic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E997C2EDF75CCF19355FFC8 /* Pods_ARMagicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890D4F2DAB5ECBFEBA71D78F /* Pods_ARMagicUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				90C6B8E720BDF9D000385068 /* ARMagicTests */,
 				90C6B8F220BDF9D000385068 /* ARMagicUITests */,
 				90C6B8D120BDF9CF00385068 /* Products */,
+				AB98528F60A73D807D06C06B /* Pods */,
+				C613990480C8AC7261DA7FC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				90C6B8D320BDF9CF00385068 /* AppDelegate.swift */,
-				90C6B8D520BDF9CF00385068 /* ViewController.swift */,
-				90C6B8D720BDF9CF00385068 /* Main.storyboard */,
 				90C6B8DA20BDF9D000385068 /* Assets.xcassets */,
 				90C6B8DC20BDF9D000385068 /* LaunchScreen.storyboard */,
 				90C6B8DF20BDF9D000385068 /* Info.plist */,
+				90C6B90120BDFB1700385068 /* GameViewController.swift */,
+				900CECAC20BEF63900F9AC7B /* Extension.swift */,
 			);
 			path = ARMagic;
 			sourceTree = "<group>";
@@ -125,6 +142,29 @@
 			path = ARMagicUITests;
 			sourceTree = "<group>";
 		};
+		AB98528F60A73D807D06C06B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				063AA0754C1D5F7D917F2FAD /* Pods-ARMagic.debug.xcconfig */,
+				0F93AEB073EC975A3CFF41BF /* Pods-ARMagic.release.xcconfig */,
+				DC7C699E2FB597E5D9851DF2 /* Pods-ARMagicTests.debug.xcconfig */,
+				B0A1B5861F4FAF4DDA088338 /* Pods-ARMagicTests.release.xcconfig */,
+				49347719327DE9691732EC2B /* Pods-ARMagicUITests.debug.xcconfig */,
+				132E48834202CE547DD3D70A /* Pods-ARMagicUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C613990480C8AC7261DA7FC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3321237E274449BB84D1362A /* Pods_ARMagic.framework */,
+				956FD680F8802591B5BC0FBB /* Pods_ARMagicTests.framework */,
+				245D98274519F50DD6299562 /* Pods_ARMagicUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90C6B8F820BDF9D000385068 /* Build configuration list for PBXNativeTarget "ARMagic" */;
 			buildPhases = (
+				78A08DC92E3281E0DFF5F2CD /* [CP] Check Pods Manifest.lock */,
 				90C6B8CC20BDF9CF00385068 /* Sources */,
 				90C6B8CD20BDF9CF00385068 /* Frameworks */,
 				90C6B8CE20BDF9CF00385068 /* Resources */,
+				6B94603132F7E77D9FAA4788 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90C6B8FB20BDF9D000385068 /* Build configuration list for PBXNativeTarget "ARMagicTests" */;
 			buildPhases = (
+				5847FB7FAD401D519FB589D5 /* [CP] Check Pods Manifest.lock */,
 				90C6B8E020BDF9D000385068 /* Sources */,
 				90C6B8E120BDF9D000385068 /* Frameworks */,
 				90C6B8E220BDF9D000385068 /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90C6B8FE20BDF9D000385068 /* Build configuration list for PBXNativeTarget "ARMagicUITests" */;
 			buildPhases = (
+				98609045B926285258C85AE4 /* [CP] Check Pods Manifest.lock */,
 				90C6B8EB20BDF9D000385068 /* Sources */,
 				90C6B8EC20BDF9D000385068 /* Frameworks */,
 				90C6B8ED20BDF9D000385068 /* Resources */,
@@ -231,7 +275,6 @@
 			files = (
 				90C6B8DE20BDF9D000385068 /* LaunchScreen.storyboard in Resources */,
 				90C6B8DB20BDF9D000385068 /* Assets.xcassets in Resources */,
-				90C6B8D920BDF9CF00385068 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +294,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5847FB7FAD401D519FB589D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARMagicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B94603132F7E77D9FAA4788 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ARMagic/Pods-ARMagic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARMagic/Pods-ARMagic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78A08DC92E3281E0DFF5F2CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARMagic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98609045B926285258C85AE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARMagicUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90C6B8CC20BDF9CF00385068 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C6B8D620BDF9CF00385068 /* ViewController.swift in Sources */,
+				900CECAD20BEF63900F9AC7B /* Extension.swift in Sources */,
+				90C6B90220BDFB1700385068 /* GameViewController.swift in Sources */,
 				90C6B8D420BDF9CF00385068 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +412,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		90C6B8D720BDF9CF00385068 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				90C6B8D820BDF9CF00385068 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		90C6B8DC20BDF9D000385068 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -428,6 +539,7 @@
 		};
 		90C6B8F920BDF9D000385068 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 063AA0754C1D5F7D917F2FAD /* Pods-ARMagic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +558,7 @@
 		};
 		90C6B8FA20BDF9D000385068 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F93AEB073EC975A3CFF41BF /* Pods-ARMagic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +577,7 @@
 		};
 		90C6B8FC20BDF9D000385068 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC7C699E2FB597E5D9851DF2 /* Pods-ARMagicTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +599,7 @@
 		};
 		90C6B8FD20BDF9D000385068 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0A1B5861F4FAF4DDA088338 /* Pods-ARMagicTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +621,7 @@
 		};
 		90C6B8FF20BDF9D000385068 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49347719327DE9691732EC2B /* Pods-ARMagicUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +642,7 @@
 		};
 		90C6B90020BDF9D000385068 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 132E48834202CE547DD3D70A /* Pods-ARMagicUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
