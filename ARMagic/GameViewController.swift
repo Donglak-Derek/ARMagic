@@ -94,6 +94,10 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         arView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         arView.autoenablesDefaultLighting = true
         arView.delegate = self
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        arView.addGestureRecognizer(tapGestureRecognizer)
+        
         }
     
     override var prefersStatusBarHidden: Bool{
@@ -160,6 +164,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
     func createFloor(anchor: ARPlaneAnchor) -> SCNNode {
         let floor = SCNNode()
+        floor.name = "floor"
         floor.eulerAngles = SCNVector3(90.degreesToRadians, 0, 0)
         floor.geometry = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
         floor.geometry?.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "material-1")
@@ -186,8 +191,8 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         guard let anchorPlane = anchor as? ARPlaneAnchor else { return }
         print("Plane Anchor updated with extent:", anchorPlane.extent)
         removeNode(named: "floor")
-//        let floor = createFloor(anchor: anchorPlane)
-//        node.addChildNode(floor)
+        let floor = createFloor(anchor: anchorPlane)
+        node.addChildNode(floor)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
@@ -195,8 +200,35 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         print("Plane Anchor removed with extent:", anchorPlane.extent)
         removeNode(named: "floor")
     }
+    // object C because it's selector
+    @objc func handleTap(sender: UITapGestureRecognizer ) {
+        let tappedView = sender.view as! SCNView
+        let touchLocation = sender.location(in: tappedView)
+        let hitTest = tappedView.hitTest(touchLocation, options: nil)
+        if !hitTest.isEmpty {
+            let result = hitTest.first!
+            let name = result.node.name
+            let geometry = result.node.geometry
+            print("Tapped \(String(describing: name)) with geometry: \(String(describing: geometry))")
+        }
+    }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
