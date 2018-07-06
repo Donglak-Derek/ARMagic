@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/derekmacbook/Documents/mobile/AR/ARMagic/build/Debug-iphoneos/LBTAComponents/LBTAComponents.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/derekmacbook/Documents/mobile/AR/ARMagic/build/Pods.build/Debug-iphoneos/LBTAComponents.build/unextended-module.modulemap',
+    }]
+  }]
+}

@@ -1,0 +1,6 @@
+framework module Pods_ARMagicTests {
+  umbrella header "Pods-ARMagicTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

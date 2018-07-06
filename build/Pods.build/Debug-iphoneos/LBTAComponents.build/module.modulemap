@@ -1,0 +1,11 @@
+framework module LBTAComponents {
+  umbrella header "LBTAComponents-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module LBTAComponents.Swift {
+    header "LBTAComponents-Swift.h"
+    requires objc
+}

@@ -17,7 +17,7 @@
 		90C6B8E920BDF9D000385068 /* ARMagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8E820BDF9D000385068 /* ARMagicTests.swift */; };
 		90C6B8F420BDF9D000385068 /* ARMagicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8F320BDF9D000385068 /* ARMagicUITests.swift */; };
 		90C6B90220BDFB1700385068 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B90120BDFB1700385068 /* GameViewController.swift */; };
-		A69617DADE5ED63964CC12CA /* Pods_ARMagic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321237E274449BB84D1362A /* Pods_ARMagic.framework */; };
+		A69617DADE5ED63964CC12CA /* Pods_ARMagic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321237E274449BB84D1362A /* Pods_ARMagic.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
